@@ -6,14 +6,15 @@
 *{
 	
 	margin: 0;
-	padding: 0,
-	box:border-box;
+	padding: 0;
+	box-sizing:border-box;
 	outline: none;
+	border: none;
 	text-decoration: none;
 }
 
 body{
-	font-family: 'Lora',sans-serif;
+	font-family: 'poppins',sans-serif;
 	background-color: var(--bg);
 	color:#fff;
 }
@@ -24,7 +25,7 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 7%;
-	background-color: rgb(1,1,1,0.8);
+	background-color: rgba(1,1,1,0.8);
 	border-bottom: 1px solid #fff;
 	position: fixed;
 	top:0;
@@ -39,6 +40,7 @@ body{
 	font-weight: 700;
 	color: #fff;
 	font-style: italic;
+	border-bottom: 0px;
 }
 .navbar .navbar-logo span{
 	color: var(--primary);
@@ -47,7 +49,7 @@ body{
 .navbar .navbar-nav a{
 	color:#fff;
 	display: inline-block;
-	font-size:1.4rem;
+	font-size:1rem;
 	margin: 10px; 
 }
 .navbar .navbar-nav a:hover {
@@ -57,4 +59,68 @@ body{
 	color: var(--primary);
 	margin: 5px; 
 }
+.navbar .navbar-extra a:hover{
+	color: #fff;
+	margin: 5px; 
+}
+#hamburger-menu{
+	display: none;
+}
+.hero{
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	background-image: url('img/kopi.JPG');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+/* Media queries*/
+@media(max-width: 1366px){
+	html{
+		font-size: 75%;
+	}
+}
+@media(max-width: 758px){
+	html{
+		font-size: 62.5%;
+	}
+
+	#hamburger-menu{
+		display: inline-block;
+	}
+	.navbar .navbar-nav{
+	position: absolute;
+	top: 100%;
+	right: -100%;
+	background-color: #fff;
+	width: 30rem;
+	height: 100vh;
+	transition: 0.3s;
+
+	}
+	.navbar .navbar-nav.active {
+	right: 0;
+	}
+	.navbar .navbar-nav a{
+		color: var(--bg);
+		display: block;
+		margin: 1.5rem;
+		padding: 0.5rem;
+		font-size: 2rem;
+	}
+}
+@media(max-width: 450px){
+	html{
+		font-size: 55%;
+	}
+
+
+
+	
+}
+
+
 
