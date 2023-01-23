@@ -7,7 +7,7 @@
 	
 	margin: 0;
 	padding: 0,
-	box-sizing:border-box;
+	box:border-box;
 	outline: none;
 	text-decoration: none;
 }
@@ -23,7 +23,7 @@ body{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.4rem 7%;
+	padding: 1rem 7%;
 	background-color: rgb(1,1,1,0.8);
 	border-bottom: 1px solid #fff;
 	position: fixed;
@@ -53,3 +53,8 @@ body{
 .navbar .navbar-nav a:hover {
 	color: var(--primary);
 }
+.navbar .navbar-extra a{
+	color: var(--primary);
+	margin: 5px; 
+}
+
